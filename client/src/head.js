@@ -1,0 +1,29 @@
+export const head =[
+    {   
+        id:'id',
+        header:'S.No'
+    },
+    {   
+        name:'name',
+        header:'Name'
+    },
+    {   
+        age:'age',
+        header:'Age'
+    },
+    {   
+        country:'country',
+        header:'Country'
+    },
+    {   
+        position:'position',
+        header:'Position'
+    },
+    {   
+        wage:'wage',
+        header:'Wage'
+    },{
+        action:'action',
+        header:'Action'
+    }    
+] 
