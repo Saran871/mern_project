@@ -1,4 +1,4 @@
-export const head =[
+export const header =[
     {   
         id:'id',
         header:'S.No'

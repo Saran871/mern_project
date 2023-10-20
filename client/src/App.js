@@ -1,35 +1,20 @@
-import './App.css';
-import {Col, Container, Row} from 'react-bootstrap';
-import EmpList from './components/EmpList'
-import EmpCreate from './components/EmpCreate'
 
-function App() {
+import React from 'react';
+import {BrowserRouter , Routes, Route} from 'react-router-dom'
+import HomePage from './components/home/HomePage';
+import AddEmp from './components/forms/AddEmp';
+import EditEmp from './components/forms/EditEmp';
+
+const App = () => {
   return (
-    <Container className=''>
-      <div className='text-center fw-bold'>
-        <h4>Curd Operations</h4>
-      </div>
-      <Row>
-        <Col lg={12}>
-          <h6 className="text-primary fw-bold fs-medium">Employees List</h6>
-        </Col>
-        <Col lg>
-        <EmpList />
-        </Col>
-        <Col lg={12}>
-        <EmpCreate />
-        </Col>
-      </Row>
-    </Container>
-    // <div className="App">
-    //   <header >
-    //     <h5>
-    //       Curd Operation
-    //     </h5>
-        
-    //   </header>
-    // </div>
-  );
+    <BrowserRouter basename="/">
+      <Routes>
+        <Route path='/' element={<HomePage />}></Route>
+        <Route path='/create' element={<AddEmp />}></Route>
+        <Route path='/edit/:id' element={<EditEmp />}></Route>
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
